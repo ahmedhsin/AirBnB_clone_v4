@@ -2,10 +2,10 @@
 
 $(document).ready(function () {
   const selectors = $('.amenity_select');
-  let amenities = {};
-  
-  $.each(selectors, function(index, element) {
-    $(element).click(function() {
+  const amenities = {};
+
+  $.each(selectors, function (index, element) {
+    $(element).click(function () {
       const id = $(this).attr('data-id');
       if ($(this).prop('checked')) {
         amenities[id] = $(this).attr('data-name');
@@ -20,11 +20,13 @@ $(document).ready(function () {
     });
   });
 
-  $.get('http://0.0.0.0:5001/api/v1/status', function(data) {
-    if (data['status'] === 'OK') {
+  $.get('http://0.0.0.0:5001/api/v1/status/', function (data) {
+    if (data.status === 'OK') {
       $('div#api_status').addClass('available');
+      $('div#api_status').removeClass('unavailable');
     } else {
       $('div#api_status').removeClass('available');
+      $('div#api_status').addClass('unavailable');
     }
   });
 });
