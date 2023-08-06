@@ -40,11 +40,11 @@ $(document).ready(function () {
         const titleBox = `
         <div class="title_box">
           <h2>${place.name}</h2>
-          <div class="price_by_night">${place.price_by_night}</div>
+          <div class="price_by_night">$${place.price_by_night}</div>
         </div>`;
-        const guestString = place.max_guest != 1 ? 'Guest' : 'Guests';
-        const bedroomString = place.number_rooms != 1 ? 'Bedroom' : 'Bedrooms';
-        const bathroomString = place.number_bathrooms != 1 ? 'Bathroom' : 'Bathrooms';
+        const guestString = place.max_guest != 1 ? 'Guests' : 'Guest';
+        const bedroomString = place.number_rooms != 1 ? 'Bedrooms' : 'Bedroom';
+        const bathroomString = place.number_bathrooms != 1 ? 'Bathrooms' : 'Bathroom';
         const information = `
         <div class="information">
             <div class="max_guest">${place.max_guest} ${guestString}</div>
