@@ -1,5 +1,4 @@
 .places {
-    display: flex;
     column-count: 2;
     columns: 30em;
     justify-content: center;

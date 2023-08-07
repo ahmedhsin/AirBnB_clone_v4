@@ -101,3 +101,11 @@ button:hover {
 .locations:hover .popover {
     visibility: visible;
 }
+
+.states_list h2 {
+	display: inline-block;
+}
+
+.city_select.state_select {
+	margin-right: 10px;
+}
